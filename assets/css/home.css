@@ -134,13 +134,10 @@
         text-transform: capitalize;
     
 }
-@media only screen and (min-width: 400px){
-    .btn{
-        display: ;
-    }
-
+@media only screen and (min-width: 300px){
+    
     .hero{
-        height: 40vh;
+        height: 60vh;
         width: 100%;
         background-image: url(../photo/bg1.png);
         background-size: cover;
@@ -160,6 +157,9 @@
         padding: 10px 15px;
     
     }
+    nav ul a .btn::after{
+        display:none ; 
+    }
     .logo{
         font-size: 20px;
         letter-spacing: 1px;
@@ -171,12 +171,12 @@
         position: absolute;
         top: 50%;
         left:8%;
-    transform: translateY(-180%);
+    transform: translateY(-160%);
     }
     h1{
         color: black;
-        margin: 0px 0px 20px;
-        font-size:25px;
+        margin: 0px 0px 0px;
+        font-size:30px;
     }
     h2{
         color: black;
@@ -184,10 +184,10 @@
         padding: 20px 4px ;
     }
     h3{
-        font-size: 20px;
+        font-size: 18px;
+        margin-top:0%
     }
     .main1 ,.main2{
-        position: relative;
         background-color: rgb(218, 222, 221);
         max-width: max-content;
         width: 100%;
@@ -263,6 +263,7 @@
         }
         .sub_main{
             display: flex;
+            flex-direction: row; 
             width: 100%;
             margin: 0px 20px ;
         }
@@ -377,7 +378,8 @@
             background-color: rgb(218, 222, 221);
         }
         .sub_main{
-            display:flex;
+            display: flex;
+            flex-direction: row; 
             width: 100%;
             margin: 0px 20px ;
         }
@@ -500,10 +502,12 @@
             
             .main1 ,.main2{
                 width: 100%;
+                display: flex;
                 background-color: rgb(218, 222, 221);
             }
             .sub_main{
                 display: flex;
+                flex-direction: row; 
                 width: 100%;
                 margin: 0px 20px ;
             }
@@ -515,11 +519,12 @@
             .content2{
                 align-items: center;
                 font-size:30px;
+                width:50%;
                 padding: 20px 100px 0 100px;
             }
             .main2 img{
                 height: auto;
-                width: 500px;
+                width: 300px;
                margin-right: 100px; 
             }
             footer{
