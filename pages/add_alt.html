@@ -1,0 +1,74 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta charset="utf-8">
+        <title>Responsive Navbar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="../assets/css/admin.css">
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/213713d567.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <div class="hero">
+        <nav> 
+            <div class="logo">BCF</div>
+            <ul>
+                <li><a  href="../home.html">Home</a></li>
+                <li><a href="./pages/about.html">about</a></li>
+                <li><a href="./pages/shop.html">shop</a></li>
+                <li><a href="./pages/contact.html">contact us</a></li>
+                
+            </ul>
+            
+        </nav>
+        </div>
+
+       <div class="main">
+        <div class="left_side">
+            <a href="admin.html">messages </a>
+            <a href="#">edit article </a>
+            <a href="add_pro.html">add product</a>
+        </div>
+        <div class="right_side"> 
+            <div class="content">
+                <h2> Add Alticle </h2>
+                <form action="create_html" method="post">
+                    <div class="input-field">
+                    <label><h3>title</h3></label>
+                    <input type="text" name="title" class="text_input"> 
+                    </div>
+                    <div class="input-field">
+                        <label><h3>Body</h3></label>
+                       <textarea class="text_input2" name="body" id="body"></textarea>
+                        </div>
+                        <div class="input-field">
+                            <label><h3>Image</h3></label>
+                        <form action="/action_page.php">
+                            <input type="file" id="myFile" name="filename">
+                            <input type="submit" class="submit">
+                          </form>
+                        </div>
+                </form>
+            
+            </div>
+        </div>
+       </div>
+
+        
+            
+        
+
+       
+
+        <footer>
+            <p> BCF</p>
+            <p>If you want more info follow us on :</p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i>
+            </a>
+        </div>
+        </footer>
+    </dody>
+</html>
