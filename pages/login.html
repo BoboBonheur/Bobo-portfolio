@@ -5,6 +5,7 @@
         <title>Responsive Navbar</title>
         <meta name="viewport" contact="width-device-width, initial-scale-1.0,minimum-scale=1.0,maximum-scale=1.0">
         <link rel="stylesheet" href="../assets/css/login.css">
+        <link rel="stylesheet" type="text/css" herf="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/213713d567.js" crossorigin="anonymous"></script>
     </head>
@@ -24,7 +25,7 @@
         </div>
         <div class="container" id="main">
             <div class="sign-up">
-                <form  >
+                <form  action="#">
                     <h1>Create account</h1>
                     <div class="social-container">
                         <a href="#" class="social"><i class="fab fa-facebook-f"></i> </a>
@@ -35,6 +36,7 @@
                     <input type="text" name="txt" placeholder="Name" required="">
                     <input type="email" name="email" placeholder="Email" required="">
                     <input type="password" name="pswd" placeholder="Password" required="">
+                    <button>Sign Up</button>
                 </form></div> 
 
                 <div class="sign-in">
@@ -74,11 +76,11 @@
             const signInButton = document.getElementById('signIn');
             const main = document.getElementById('main');
 
-            signUpButton.addEventListener('click', () =>{
+            signUpButton.addEventListener('click', () => {
                 main.classListener.add("right-panel-active");
             });
 
-            signInButton.addEventListener('click', () =>{
+            signInButton.addEventListener('click', () => {
                 main.classListener.remove("right-panel-active");
             });
         </script>

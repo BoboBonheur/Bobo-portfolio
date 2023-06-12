@@ -29,42 +29,121 @@
             <a href="add_alt.html">Article </a>
             <a href="#">Product</a>
         </div>
+        
         <!-- button-->
         
         <div class="right_side"> 
-            <div class="content">
-                <div class="button-group">
-                    <a href="add_pro.html" class="btn btn-big">Add Article</a>
-                    <a href="manage.html" class="btn btn-big">Manage Article</a>
-                </div>
-                <h2> Add Product </h2>
-                <form action="create_html" method="post">
-                    <div class="input-field">
-                    <label><h3>Description</h3></label>
-                    <input type="text" name="title" class="text_input"> 
-                    </div>
-                    <div class="input-field">
+            <div class="content1">
+                
+                <div class="btns"> <button class="btn" id="showDialog">Add product</button></div>
+                <h2> Manage Product </h2>
+    
+                     <dialog id="favDialog">
+                <form>
+                    <h1>fill the form</h1>
+                        <label><h3>Name</h3></label>
+                        <input type="text" name="title" class="text_input"> 
+                        <label><h3>Description</h3></label>
+                        <input type="text" name="title" class="text_input"> 
                         <label><h3>Price</h3></label>
                         <input type="text" name="title" class="text_input"> 
-                        </div>
-                        <div class="input-field">
-                            <label><h3>Image</h3></label>
-                        <form action="/action_page.php">
-                            <input type="file" id="myFile" name="filename">
-                            <input type="submit" name="" class="submit">
-                          </form>
-                        </div>
+                        
+                        <label><h3>Image</h3></label>
+                        <input type="file" id="myFile" name="filename">
+                            
+                        <div class="btns">
+
+                            <button class="btn" value="cancel" formmethod="dialog">Cancel</button>
+                            <button class="btn" id="confirmBtn" value="default">Confirm</button>
+                          </div>
+                         
+                       
                 </form>
+            </dialog>  
             
+          
+                <form id="form1">
+                    <div class="divTable">
+                           <div class="headRow">
+                              <div class="divCell" >ID</div>
+                              <div  class="divCell">Name </div>
+                              <div  class="divCell">Description</div>
+                              <div  class="divCell">Price</div>
+                              <div class="divCell">Image</div>
+                              <div class="divCell">Action</div>
+                              
+                           </div>
+                          <div class="divRow">
+                                <div class="divCell">001</div>
+                              <div class="divCell">yyy</div>
+                              <div class="divCell">jjj</div>
+                              <div class="divCell">yyy</div>
+                              <div class="divCell">jjj</div>
+                              <div class="divCell">
+                                <a href="#">edit</a>
+                                <a href="#">delete</a>
+                            </div>
+                              
+                          </div>
+                          <div class="divRow">
+                              <div class="divCell">002</div>
+                              <div class="divCell">yyy</div>
+                              <div class="divCell">www</div>
+                              <div class="divCell">yyy</div>
+                              <div class="divCell">jjj</div>
+                              <div class="divCell">
+                                <a href="#">edit</a>
+                                <a href="#">delete</a>
+                            </div>
+                         </div>
+                          <div class="divRow">
+                              <div class="divCell">003</div>
+                              <div class="divCell">uuu</div>
+                              <div class="divCell">Mkkk</div>
+                              <div class="divCell">yyy</div>
+                              <div class="divCell">jjj</div>
+                              <div class="divCell">
+                                <a href="#">edit</a>
+                                <a href="#">delete</a>
+                            </div>
+                         </div>
+              
+                    </div>
+                </form>
+              
+              
+                      </div>
             </div>
         </div>
-       </div>
-
         
-            
-        
+       <script>
+        const showButton = document.getElementById('showDialog');
+const favDialog = document.getElementById('favDialog');
+const outputBox = document.querySelector('output');
+const selectEl = favDialog.querySelector('select');
+const confirmBtn = favDialog.querySelector('#confirmBtn');
 
-       
+// "Show the dialog" button opens the <dialog> modally
+showButton.addEventListener('click', () => {
+  favDialog.showModal();
+});
+
+// "Favorite animal" input sets the value of the submit button
+selectEl.addEventListener('change', (e) => {
+  confirmBtn.value = selectEl.value;
+});
+
+// "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
+favDialog.addEventListener('close', (e) => {
+  outputBox.value = favDialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+});
+
+// Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
+confirmBtn.addEventListener('click', (event) => {
+  event.preventDefault(); // We don't want to submit this fake form
+  favDialog.close(selectEl.value); // Have to send the select box value here.
+});
+       </script>
 
         <footer>
             <p> BCF</p>

@@ -46,15 +46,21 @@ nav ul li a:hover{
     text-decoration: none;
     background-origin: 2px solid transparent;
     font-weight: bold;
+    font-size: 20px;
     padding: 10px 25px;
     transition: transform .4s;
     padding-top: 0%;
 }
-.button-group{}
+.btns{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
 .btn:hover{
     transform: scale(1.2);
 
 }
+
 
 .main{
     height: 80%;
@@ -171,3 +177,32 @@ margin-top: 20px;
     text-transform: capitalize;
 
 }
+.divTable
+                  {
+                      display:  table;
+                      width:auto;
+                      background-color:#eee;
+                      border:1px solid  #666666;
+                      border-spacing:5px;/*cellspacing:poor IE support for  this*/
+                     /* border-collapse:separate;*/
+                  }
+              
+                  .divRow
+                  {
+                     display:table-row;
+                     width:auto;
+                  }
+                
+              
+                  .divCell
+                  {
+                      float:left;/*fix for  buggy browsers*/
+                      display:table-column;
+                      width:130px;
+                      background-color:#ccc;
+                  }
+                  form{
+                    justify-content: center;
+                    margin-left: 130px;
+                    align-items: center;
+                  }
