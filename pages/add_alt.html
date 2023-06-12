@@ -1,0 +1,156 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta charset="utf-8">
+        <title>Responsive Navbar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="../assets/css/admin.css">
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/213713d567.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <div class="hero">
+        <nav> 
+            <div class="logo">BCF</div>
+            <ul>
+               <!----<li><a  href="../home.html">Home</a></li>
+                <li><a href="./pages/about.html">about</a></li>
+                <li><a href="./pages/shop.html">shop</a></li>
+                <li><a href="./pages/contact.html">contact us</a></li>-->
+                
+            </ul>
+            
+        </nav>
+        </div>
+
+       <div class="main">
+        <div class="left_side">
+            <a href="admin.html">Messages </a>
+            <a href="#">Article </a>
+            <a href="add_pro.html">Product</a>
+        </div>
+
+        <div class="right_side"> 
+            <div class="content1">
+                
+                <div class="btns"> <button class="btn" id="showDialog">Add article </button></div>
+                <h2> Manage article</h2>
+    
+                     <dialog id="favDialog">
+                <form>
+                    <h1>fill the form</h1>
+                    <div class="input-field">
+                        <label><h3>title</h3></label>
+                        <input type="text" name="title" class="text_input"> 
+                        </div>
+                        <div class="input-field">
+                            <label><h3>Body</h3></label>
+                           <textarea class="text_input2" name="body" id="body"></textarea>
+                            </div>
+                            <div class="input-field">
+                                <label><h3>Image</h3></label>
+                        <input type="file" id="myFile" name="filename">
+                            
+                        <div class="btns">
+
+                            <button class="btn" value="cancel" formmethod="dialog">Cancel</button>
+                            <button class="btn" id="confirmBtn" value="default">Confirm</button>
+                          </div>
+                         
+                       
+                </form>
+            </dialog>  
+            
+          
+                <form id="form1">
+                    <div class="divTable">
+                           <div class="headRow">
+                              <div class="divCell" >ID</div>
+                              <div  class="divCell">Title </div>
+                              <div  class="divCell">Description</div>
+                              <div class="divCell">Image</div>
+                              <div class="divCell">Action</div>
+                              
+                           </div>
+                          <div class="divRow">
+                                <div class="divCell">001</div>
+                              <div class="divCell">yyy</div>
+                              <div class="divCell">jjj</div>
+                              <div class="divCell">yyy</div>
+                              <div class="divCell">
+                                <a href="#">edit</a>
+                                <a href="#">delete</a>
+                            </div>
+                              
+                          </div>
+                          <div class="divRow">
+                              <div class="divCell">002</div>
+                              <div class="divCell">yyy</div>
+                              <div class="divCell">www</div>
+                              <div class="divCell">jjj</div>
+                              <div class="divCell">
+                                <a href="#">edit</a>
+                                <a href="#">delete</a>
+                            </div>
+                         </div>
+                          <div class="divRow">
+                              <div class="divCell">003</div>
+                              <div class="divCell">uuu</div>
+                              <div class="divCell">Mkkk</div>
+                              <div class="divCell">yyy</div>
+                              <div class="divCell">
+                                <a href="#">edit</a>
+                                <a href="#">delete</a>
+                            </div>
+                         </div>
+              
+                    </div>
+                </form>
+              
+              
+                      </div>
+            </div>
+        </div>
+        
+       <script>
+        const showButton = document.getElementById('showDialog');
+const favDialog = document.getElementById('favDialog');
+const outputBox = document.querySelector('output');
+const selectEl = favDialog.querySelector('select');
+const confirmBtn = favDialog.querySelector('#confirmBtn');
+
+// "Show the dialog" button opens the <dialog> modally
+showButton.addEventListener('click', () => {
+  favDialog.showModal();
+});
+
+// "Favorite animal" input sets the value of the submit button
+selectEl.addEventListener('change', (e) => {
+  confirmBtn.value = selectEl.value;
+});
+
+// "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
+favDialog.addEventListener('close', (e) => {
+  outputBox.value = favDialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+});
+
+// Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
+confirmBtn.addEventListener('click', (event) => {
+  event.preventDefault(); // We don't want to submit this fake form
+  favDialog.close(selectEl.value); // Have to send the select box value here.
+});
+       </script>
+
+
+        <footer>
+            <p> BCF</p>
+            <p>If you want more info follow us on :</p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i>
+            </a>
+        </div>
+        </footer>
+    </dody>
+</html>

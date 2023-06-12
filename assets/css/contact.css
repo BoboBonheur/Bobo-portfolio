@@ -93,7 +93,7 @@ h2{
     width:200%;
     border:none;
     outline:none;
-    border-radius: 40px;
+    border-radius: 2px;
     color:#000000;
     padding: 0 0 0px 50px;
 }
@@ -103,7 +103,7 @@ h2{
     width:200%;
     border:none;
     outline:none;
-    border-radius: 40px;
+    border-radius: 10px;
     color:#000000;
     padding: 0 0 0px 50px;
 }
@@ -164,4 +164,120 @@ margin-top: 20px;
     font-weight: bold;
     text-transform: capitalize;
     
+}
+@media only screen and (min-width: 700px){
+    h2{
+        justify-content: center;
+        padding: 50px 0;
+        padding: 50px 0 20px 0;
+    }
+    .top-header{
+        color:black;
+        font-size:30px;
+        display:flex;
+        justify-content : center ;
+        padding: 10px 0 10px 0;
+    }
+    .field1{
+        height:120px;
+        width:350%;
+        border:none;
+        outline:none;
+        border-radius: 10px;
+        color:#000000;
+        padding: 0 0 0px 50px;
+    }
+    
+    .field{
+        height:50px;
+        width:350%;
+        border:none;
+        outline:none;
+        border-radius: 10px;
+        color:#000000;
+        padding: 0 0 0px 50px;
+    }
+    
+    .input-field{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    ::-webkit-input-placeholder{
+        color :#0f0d07;
+        font-size: 30px;
+    
+    }
+    .submit{
+        border:none;
+        border-radius :30px;
+        font-size:15px;
+        height:45px;
+        outline: none;
+        width:100%;
+        background: rgba(218, 197, 151, 0.1);
+        cursor:pointer;
+    }
+    .submit:hover{
+        box-shadow:1px 5px 7 1px 
+    }
+}
+@media only screen and (min-width: 1000px){
+    h2{
+        justify-content: center;
+        padding: 50px 0;
+        padding: 50px 0 20px 0;
+    }
+    .top-header{
+        color:black;
+        font-size:25px;
+        display:flex;
+        justify-content : center ;
+        padding: 10px 0 10px 0;
+    }
+    .field1{
+        height:120px;
+        width:280%;
+        border:none;
+        outline:none;
+        border-radius: 10px;
+        color:#000000;
+        padding: 0 0 0px 50px;
+    }
+    
+    .field{
+        height:50px;
+        width:280%;
+        border:none;
+        outline:none;
+        border-radius: 10px;
+        color:#000000;
+        padding: 0 0 0px 50px;
+    }
+    
+    .input-field{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    ::-webkit-input-placeholder{
+        color :#0f0d07;
+        font-size: 20px;
+    
+    }
+    .submit{
+        border:none;
+        border-radius :30px;
+        font-size:15px;
+        height:45px;
+        outline: none;
+        width:100%;
+        background: rgba(218, 197, 151, 0.1);
+        cursor:pointer;
+    }
+    .submit:hover{
+        box-shadow:1px 5px 7 1px 
+    }
 }
